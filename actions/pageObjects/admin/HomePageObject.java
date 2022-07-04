@@ -1,6 +1,8 @@
 package pageObjects.admin;
 
-public class HomePageObject {
+import commons.BasePage;
+
+public class HomePageObject extends BasePage {
     // Hàm để tương tác với các element
 public void clickToRegisterButton() {	
 }

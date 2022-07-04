@@ -1,4 +1,4 @@
-package commoms;
+package commons;
 
 public enum BrowserList {
 
