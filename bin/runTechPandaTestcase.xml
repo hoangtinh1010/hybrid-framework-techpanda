@@ -4,7 +4,7 @@
   <test name="Run on Firefox browser">
   <parameter name = "browser" value = "firefox"/>
     <classes>
-      <class name="javaBasic.Topic_06_Condition_Excercise"/>
+      <class name="com.techpanda.account.Level_4_Multiple_Browser"/>
 
     </classes>
   </test> 
@@ -12,7 +12,7 @@
     <test name="Run on CHROME browser">
   <parameter name = "browser" value = "chrome"/>
     <classes>
-      <class name="com.techpanda.account.Level_3_Page_Object_pattem"/>
+      <class name="com.techpanda.account.Level_4_Multiple_Browser"/>
 
     </classes>
   </test> 
@@ -20,7 +20,7 @@
     <test name="Run on EDGE browser">
   <parameter name = "browser" value = "edge"/>
     <classes>
-      <class name="com.techpanda.account.Level_3_Page_Object_pattem"/>
+      <class name="com.techpanda.account.Level_4_Multiple_Browser"/>
 
     </classes>
   </test> 
