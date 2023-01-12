@@ -1,10 +1,8 @@
 package com.techpanda.account;
 
 import java.util.Random;
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -27,16 +25,11 @@ public class Level_4_Multiple_Browser extends BaseTest {
 
 	@Parameters({ "browser" })
 	@BeforeClass // Chạy trước cho testcase đầu tiên
-	public void beforeClass() {
-		System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-		driver.get("http://live.techpanda.org");
+	public void beforeClass(String browserName) {
+		driver = getBrowserDriver(browserName);
 
 		// 1- Mở Url ra là qua trang HomePage
 		// 2- Muốn dùng được class HomePageObject thì phải khởi tạo nó lên
-
 		homePage = new HomePageObject(driver);
 
 	}

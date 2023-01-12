@@ -10,9 +10,9 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import commons.BaseTest;
-import pageObject.user.HomePageObject;
-import pageObject.user.LoginPageObject;
-import pageObject.user.MyDashboardPageObject;
+import pageFactory.user.HomePageObject;
+import pageFactory.user.LoginPageObject;
+import pageFactory.user.MyDashboardPageObject;
 
 public class Level_5_Selenium_Page_Factory extends BaseTest {
 
@@ -84,7 +84,7 @@ public class Level_5_Selenium_Page_Factory extends BaseTest {
 		loginPage.inputToPasswordTextbox("123456");
 		loginPage.clickToLoginButton();
 
-		Assert.assertEquals(loginPage.getEmailAdressOrPasswordIncorrectErrorMessage(), "Invalid login or password.");
+		Assert.assertEquals(loginPage.getEmailAddressOrPasswordIncorrectErrorMessage(), "Invalid login or password.");
 	}
 
 	@Test
@@ -97,7 +97,7 @@ public class Level_5_Selenium_Page_Factory extends BaseTest {
 		loginPage.inputToPasswordTextbox("8654321");
 		loginPage.clickToLoginButton();
 
-		Assert.assertEquals(loginPage.getEmailAdressOrPasswordIncorrectErrorMessage(), "Invalid login or password.");
+		Assert.assertEquals(loginPage.getEmailAddressOrPasswordIncorrectErrorMessage(), "Invalid login or password.");
 	}
 
 	@Test

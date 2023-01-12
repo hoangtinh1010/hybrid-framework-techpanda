@@ -1,28 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite parallel="false" name="Tech Panda">
-  <test name="Run on Firefox browser">
-  <parameter name = "browser" value = "firefox"/>
-    <classes>
-      <class name="com.techpanda.account.Level_4_Multiple_Browser"/>
 
-    </classes>
-  </test> 
-  
+<suite parallel="false" name="Tech Panda">
+
     <test name="Run on CHROME browser">
   <parameter name = "browser" value = "chrome"/>
     <classes>
-      <class name="com.techpanda.account.Level_4_Multiple_Browser"/>
+      <class name="com.techpanda.account.Level_6_Page_Generator_III"/>
 
     </classes>
   </test> 
   
-    <test name="Run on EDGE browser">
-  <parameter name = "browser" value = "edge"/>
-    <classes>
-      <class name="com.techpanda.account.Level_4_Multiple_Browser"/>
 
-    </classes>
-  </test> 
 </suite> 
       

@@ -1,16 +1,13 @@
 package javaBasic;
 
+import java.util.Scanner;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-
-import com.google.common.base.CaseFormat;
-
-import java.util.Scanner;
 
 public class Topic_07_Switch_Case {
 	WebDriver driver;
@@ -18,24 +15,24 @@ public class Topic_07_Switch_Case {
 	Scanner scanner = new Scanner(System.in);
 
 	public void TC_01(String browserName) {
-		
+
 		System.out.println(browserName);
 		System.out.println(driver.toString());
-		
+
 		driver.quit();
 	}
-	
+
 	public WebDriver getBrowserDriver(String browserName) {
-		
+
 		switch (browserName) {
 		case "chrome":
 			System.setProperty("webdriver.chrome.driver", projectPath + "\\browserDrivers\\chromedriver.exe");
 			driver = new ChromeDriver();
-			break;	
+			break;
 		case "firefox":
 			System.setProperty("webdriver.gecko.driver", projectPath + "\\browserDrivers\\geckodriver.exe");
-		    driver = new FirefoxDriver();
-		    break;
+			driver = new FirefoxDriver();
+			break;
 		case "edge":
 			System.setProperty("webdriver.edge.driver", projectPath + "\\browserDrivers\\edge.exe");
 			driver = new EdgeDriver();
@@ -45,19 +42,18 @@ public class Topic_07_Switch_Case {
 			driver = new InternetExplorerDriver();
 			break;
 		default:
-			new RuntimeException ("Please input correct the browser name! ");
+			new RuntimeException("Please input correct the browser name! ");
 			break;
-			//Có thể dùng return để thoát vòng lặp, thay cho break
+		// Có thể dùng return để thoát vòng lặp, thay cho break
 		}
-		return driver ;
-		
+		return driver;
+
 	}
-	
 
 	public void TC_02() {
 		int month = scanner.nextInt();
-		
-		switch (month){
+
+		switch (month) {
 		case 1:
 		case 3:
 		case 5:
@@ -79,16 +75,14 @@ public class Topic_07_Switch_Case {
 		default:
 			System.out.println("Tháng vừa nhập sai định dạng");
 			break;
-		
-		
+
 		}
-			
+
 	}
-	
 
 	public void TC_03() {
 		int number = scanner.nextInt();
-		switch (number){
+		switch (number) {
 		case 1:
 			System.out.println("One");
 			break;
@@ -124,24 +118,23 @@ public class Topic_07_Switch_Case {
 			System.out.println("Số vừa nhập sai định dạng");
 			break;
 		}
-	}	
-	
-	
-	//switch case
-	//Nhược điểm
-	//Chỉ nhận int/String/enum
-	//Không dùng với các toán tử trong case được: = < > != ==
-	//if else 
-	//Nhược điểm
-	//Khó đọc code
-	//Ko check trùng lặp
-	
+	}
+
+	// switch case
+	// Nhược điểm
+	// Chỉ nhận int/String/enum
+	// Không dùng với các toán tử trong case được: = < > != ==
+	// if else
+	// Nhược điểm
+	// Khó đọc code
+	// Ko check trùng lặp
+
 	@Test
 	public void TC_04() {
 		int firstNumber = scanner.nextInt();
 		int secondNumber = scanner.nextInt();
 		String operator = scanner.next();
-		
+
 		switch (operator) {
 		case "+":
 			System.out.println("A + B = " + (firstNumber + secondNumber));
@@ -162,7 +155,6 @@ public class Topic_07_Switch_Case {
 		default:
 			break;
 		}
-		
-		
+
 	}
 }

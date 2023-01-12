@@ -2,8 +2,6 @@ package elipseTips;
 
 public class Topic_03_Getter_Setter {
 	private String carName;
-	private String carType;
-	private String carColor;
 	private String carMachine;
 
 	public final String getCarMachine() {
@@ -21,8 +19,5 @@ public class Topic_03_Getter_Setter {
 	public void setCarName(String carName) {
 		this.carName = carName;
 	}
-	
-
-		
 
 }

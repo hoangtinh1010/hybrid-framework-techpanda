@@ -34,8 +34,6 @@ public class Topic_05_Casting {
 		
 		short sNumber = (short) iNumber;
 		
-		byte bNumber = (byte) sNumber;
-		
 		
 	}
 
